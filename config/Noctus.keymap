@@ -106,6 +106,87 @@
 
         tapping-term-ms = <280>;
     };
+
+    be_kakko: be_kakko {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_KAKKO";
+        #binding-cells = <0>;
+        bindings = <&ma_kakko>, <&ma_kakko2>, <&ma_kakko3>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_symbol: be_symbol {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_SYMBOL";
+        #binding-cells = <0>;
+        bindings = <&ma_under>, <&ma_at>, <&kp LS(EQUAL)>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_calc: be_calc {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_CALC";
+        #binding-cells = <0>;
+        bindings = <&kp SLASH>, <&kp LS(SEMICOLON)>, <&kp LS(SQT)>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_int4c: be_int4c {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_INT4C";
+        #binding-cells = <0>;
+        bindings = <&kp INTERNATIONAL_4>, <&kp C>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_lq: be_lq {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_LQ";
+        #binding-cells = <0>;
+        bindings = <&kp L>, <&kp Q>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_lock: be_lock {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_LOCK";
+        #binding-cells = <0>;
+        bindings = <&kp LG(E)>, <&kp LG(L)>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_shortcut: be_shortcut {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_SHORTCUT";
+        #binding-cells = <0>;
+        bindings = <&kp LC(C)>, <&kp LC(V)>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_corron: be_corron {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_CORRON";
+        #binding-cells = <0>;
+        bindings = <&ma_corron>, <&kp SEMICOLON>;
+
+        tapping-term-ms = <270>;
+    };
+
+    be_faV: be_faV {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_FAV";
+        #binding-cells = <0>;
+        bindings = <&kp LS(LC(O))>, <&kp V>;
+
+        tapping-term-ms = <280>;
+    };
 };
 
 / {
