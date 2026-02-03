@@ -9,7 +9,29 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        co_int5 {
+            bindings = <&kp INTERNATIONAL_5>;
+            key-positions = <13 12>;
+        };
+
+        co_int4 {
+            bindings = <&be_int4c>;
+            key-positions = <16 17>;
+        };
+
+        co_lq {
+            bindings = <&be_lq>;
+            key-positions = <11 12>;
+        };
+
+        co_search {
+            bindings = <&be_search>;
+            key-positions = <28 26>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -184,6 +206,24 @@
         label = "BE_FAV";
         #binding-cells = <0>;
         bindings = <&kp LS(LC(O))>, <&kp V>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_xj: be_xj {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_XJ";
+        #binding-cells = <0>;
+        bindings = <&kp X>, <&kp J>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_list: be_list {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_LIST";
+        #binding-cells = <0>;
+        bindings = <&kp LC(L)>, <&kp LC(X)>;
 
         tapping-term-ms = <280>;
     };
