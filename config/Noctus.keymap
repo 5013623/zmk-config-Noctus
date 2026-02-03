@@ -18,6 +18,48 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        ma_kakko: ma_kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INT5 &kp LS(N8) &kp LS(N9) &kp LEFT_ARROW>;
+            label = "MA_KAKKO";
+        };
+
+        ma_kakko2: ma_kakko2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INTERNATIONAL_5 &kp LS(COMMA) &kp LS(PERIOD) &kp LEFT>;
+            label = "MA_KAKKO2";
+        };
+
+        ma_kakko3: ma_kakko3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET &kp BACKSLASH &kp LEFT>;
+            label = "MA_KAKKO3";
+        };
+
+        ma_corron: ma_corron {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INTERNATIONAL_4 &kp K &kp O &kp R &kp O &kp N &kp SPACE &kp ENTER &kp INTERNATIONAL_5>;
+            label = "MA_CORRON";
+        };
+
+        ma_at: ma_at {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INTERNATIONAL_5 &kp LEFT_BRACKET>;
+            label = "MA_AT";
+        };
+
+        ma_under: ma_under {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INTERNATIONAL_4 &kp A &kp N &kp N &kp D &kp A &kp MINUS &kp B &kp A &kp MINUS &kp SPACE &kp ENTER &kp INTERNATIONAL_5>;
+            label = "MA_UNDER";
+        };
     };
 
     lt_to_layer_0: lt_to_layer_0 {
@@ -27,6 +69,42 @@
 
         #binding-cells = <2>;
         tapping-term-ms = <200>;
+    };
+
+    be_sim: be_sim {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_SIM";
+        #binding-cells = <0>;
+        bindings = <&kp F5>, <&kp F10>, <&kp F11>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_search: be_search {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_SEARCH";
+        #binding-cells = <0>;
+        bindings = <&kp F12>, <&kp LS(LA(F12))>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_VS: be_VS {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_VS";
+        #binding-cells = <0>;
+        bindings = <&kp LS(LC(F))>, <&kp LS(LC(E))>;
+
+        tapping-term-ms = <280>;
+    };
+
+    be_teams: be_teams {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BE_TEAMS";
+        #binding-cells = <0>;
+        bindings = <&kp LS(LC(M))>, <&kp LS(LC(H))>;
+
+        tapping-term-ms = <280>;
     };
 };
 
@@ -57,7 +135,7 @@
 
         layer_2 {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS        &trans            &trans             &kp UP_ARROW    &trans           &kp RIGHT_PARENTHESIS
+&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS        &trans            &trans             &kp UP_ARROW    &trans           &kp C_SLOW_TRACKING
 &kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK    &trans            &kp LEFT           &kp DOWN        &kp RIGHT        &kp PERCENT
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH
 &trans                      &trans           &kp EQUAL        &trans           &trans          &trans            &trans             &trans          &trans           &kp PIPE
